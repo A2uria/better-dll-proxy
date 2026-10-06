@@ -29,6 +29,8 @@
 
 不过微软的实现实在是太过繁琐了，`__delayLoadHelper2` 的工作其实很简单，也就是根据延迟导入表 `arg1` 和延迟导入地址 `arg2` 加载目标函数。所以我搓了一份只支持从系统目录延迟加载 DLL 的极简 `__delayLoadHelper2`。
 
+https://github.com/A2uria/better-dll-proxy/blob/eeac924895ab9e9a069721fa0158832c8b4952cb/src/__delayLoadHelper2.c#L8-L45
+
 如果需要用自己的函数替换导出的函数，只需要添加自己的实现然后修改 `.def` 文件就行。
 
 ```diff
