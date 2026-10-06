@@ -41,7 +41,7 @@ https://github.com/A2uria/better-dll-proxy/blob/eeac924895ab9e9a069721fa0158832c
      ...
 ```
 
-使用方法：给 Linker 传入 `-def:x.def -delayload:x.dll x.lib`
+使用方法：编译时加入 `__delayLoadHelper2.c`，链接时传入 `-def:x.def -delayload:x.dll x.lib`。
 
 > [!IMPORTANT]
 >
